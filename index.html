@@ -2,91 +2,208 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev-Board</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Poppins Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev-Board</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-    <style>
-        .poppins {
-            font-family: "Poppins", sans-serif;
-        }
-    </style>
+  <style>
+    .poppins {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
 </head>
 
 <body class="poppins bg-slate-200">
-    <nav class="px-32 pt-6">
-        <div class="navbar justify-between bg-white flex rounded-2xl p-5">
-            <div class="flex items-center gap-1">
-                <img class="w-8" src="assets/logo.png" alt="">
-                <h1 class="text-2xl">Dev<span class="font-bold">Board</span></h1>
-            </div>
-            <div class="flex items-center gap-9">
-                <div class="flex items-center gap-2 py-2 px-4 bg-slate-200 rounded-3xl">
-                    <img class="w-5" src="assets/checkbox.png" alt="">
-                    <h2 class="font-bold text-xl">23</h2>
-                </div>
-                <div class="p-2 bg-slate-200 rounded-full">
-                    <img id="theme-Btn" class="w-8 cursor-pointer" src="assets/theme-btn.png" alt="">
-                </div>
-            </div>
+  <!-- Navbar -->
+  <nav class="px-4 md:px-32 pt-6">
+    <div class="navbar justify-between bg-white flex rounded-2xl p-5 flex-col md:flex-row">
+      <div class="flex items-center gap-1">
+        <img class="w-8" src="assets/logo.png" alt="DevBoard logo">
+        <h1 class="text-2xl">Dev<span class="font-bold">Board</span></h1>
+      </div>
+      <div class="flex items-center gap-9 mt-4 md:mt-0">
+        <div class="flex items-center gap-2 py-2 px-4 bg-slate-200 rounded-3xl">
+          <img class="w-5" src="assets/checkbox.png" alt="Tasks">
+          <h2 class="font-bold text-xl">23</h2>
         </div>
-    </nav>
+        <div class="p-2 bg-slate-200 rounded-full">
+          <img id="theme-Btn" class="w-8 cursor-pointer" src="assets/theme-btn.png" alt="Theme button">
+        </div>
+      </div>
+    </div>
+  </nav>
 
-    <main class="px-32 py-6">
-        <section class="grid grid-cols-4 gap-6">
-          <!-- Cards -->
-          <div class="bg-white rounded-2xl p-5 col-span-3">
-            <div class="gap-5 flex border-b-2 border-dashed border-slate-200 pb-5">
-              <div class="bg-slate-200 flex p-7 items-center gap-4 rounded-xl">
-                <div class="bg-white p-2 rounded-full">
-                  <img class="w-5" src="assets/checkbox.png" alt="">
-                </div>
-                <div>
-                  <h5 class="font-medium text-xs text-gray-600">Task Assigned</h5>
-                  <h3 class="font-bold text-2xl">0<span>6</span></h3>
-                </div>
-              </div>
-              <div class="flex items-center rounded-xl p-7 bg-gradient-to-r from-blue-500 to-blue-300 gap-4">
-                <div>
-                  <img class="w-14" src="assets/board.png" alt="">
-                </div>
-                <div class="mr-5">
-                  <h2 class="font-medium text-white">Discover Something New Today!</h2>
-                </div>
-              </div>
-              <div class="bg-slate-200 flex p-7 items-center gap-4 rounded-xl">
-                <div class="bg-white p-2 rounded-full">
-                  <img class="w-5" src="assets/calender.png" alt="">
-                </div>
-                <div id="current-date" class="font-bold text-xl">
-                  <p></p>
-                </div>
-              </div>
+  <main class="px-4 md:px-32 py-6">
+    <section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- Cards -->
+      <div class="bg-white rounded-2xl p-5 col-span-1 md:col-span-3">
+        <div class="gap-5 flex flex-col md:flex-row border-b-2 border-dashed border-gray-300 pb-5">
+          <div class="bg-slate-200 flex p-7 items-center gap-4 rounded-xl mb-4 md:mb-0">
+            <div class="bg-white p-2 rounded-full">
+              <img class="w-5" src="assets/checkbox.png" alt="Checkbox">
+            </div>
+            <div>
+              <h5 class="font-medium text-xs text-gray-600">Task Assigned</h5>
+              <h3 class="font-bold text-2xl">0<span>6</span></h3>
             </div>
           </div>
-          <!-- Activity -->
-          <div class="bg-white rounded-2xl py-5 col-span-1">
-            <div class="flex items-center justify-center gap-4 mb-4">
-              <img src="assets/activity.png" alt="">
-              <h4 class="font-medium text-gray-500">Activity Log</h4>
+          <div class="flex items-center rounded-xl p-7 bg-gradient-to-r from-blue-500 to-blue-300 gap-4 mb-4 md:mb-0">
+            <div>
+              <img class="w-14" src="assets/board.png" alt="Board">
             </div>
-            <div class="flex justify-center border-b-2 border-dashed border-slate-200 pb-4">
-              <button class="btn btn-primary">Clear History</button>
+            <div class="mr-5">
+              <h2 class="font-medium text-white">Discover Something New Today!</h2>
             </div>
           </div>
-        </section>
-      </main>      
-
-    <script src="scripts/theme-btn.js"></script>
-    <script src="scripts/current-date.js"></script>
+          <div class="bg-slate-200 flex p-7 items-center gap-4 rounded-xl">
+            <div class="bg-white p-2 rounded-full">
+              <img class="w-5" src="assets/calender.png" alt="Calendar">
+            </div>
+            <div id="current-date" class="font-bold text-xl">
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <!-- More Cards -->
+        <div class="py-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Card 1 -->
+          <div class="bg-slate-200 p-4 rounded-2xl">
+            <div class="bg-white text-gray-600 text-xs font-semibold px-2 py-1 rounded-md inline-block">
+              ShopEase
+            </div>
+            <h2 class="text-lg font-semibold text-gray-900 mt-2">
+              Fix Mobile Button Issue
+            </h2>
+            <p class="text-gray-500 text-sm mt-1 bg-white p-2 rounded-md">
+              Debug using Chrome DevTools, check for overlapping elements,...
+            </p>
+            <div class="mt-4 flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-3">
+              <div class="text-gray-500 text-sm">
+                <p>Deadline</p>
+                <p class="text-gray-900 font-semibold">21 March 2025</p>
+              </div>
+              <button class="btn bg-blue-600 text-white border-none hover:bg-blue-700">Completed</button>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-slate-200 p-4 rounded-2xl">
+            <div class="bg-white text-gray-600 text-xs font-semibold px-2 py-1 rounded-md inline-block">
+              CloudSync
+            </div>
+            <h2 class="text-lg font-semibold text-gray-900 mt-2">
+              Add Dark Mode
+            </h2>
+            <p class="text-gray-500 text-sm mt-1 bg-white p-2 rounded-md">
+              Store the user's preference in localStorage, update CSS variab...
+            </p>
+            <div class="mt-4 flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-3">
+              <div class="text-gray-500 text-sm">
+                <p>Deadline</p>
+                <p class="text-gray-900 font-semibold">21 March 2025</p>
+              </div>
+              <button class="btn bg-blue-600 text-white border-none hover:bg-blue-700">Completed</button>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-slate-200 p-4 rounded-2xl">
+            <div class="bg-white text-gray-600 text-xs font-semibold px-2 py-1 rounded-md inline-block">
+              SwiftPay
+            </div>
+            <h2 class="text-lg font-semibold text-gray-900 mt-2">
+              Optimize Home page
+            </h2>
+            <p class="text-gray-500 text-sm mt-1 bg-white p-2 rounded-md">
+              Debug using Chrome DevTools, check for overlapping elements,...
+            </p>
+            <div class="mt-4 flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-3">
+              <div class="text-gray-500 text-sm">
+                <p>Deadline</p>
+                <p class="text-gray-900 font-semibold">21 March 2025</p>
+              </div>
+              <button class="btn bg-blue-600 text-white border-none hover:bg-blue-700">Completed</button>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="bg-slate-200 p-4 rounded-2xl">
+            <div class="bg-white text-gray-600 text-xs font-semibold px-2 py-1 rounded-md inline-block">
+              Meta
+            </div>
+            <h2 class="text-lg font-semibold text-gray-900 mt-2">
+              Add new emoji 🤲
+            </h2>
+            <p class="text-gray-500 text-sm mt-1 bg-white p-2 rounded-md">
+              Store the user's preference in localStorage, update CSS variab...
+            </p>
+            <div class="mt-4 flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-3">
+              <div class="text-gray-500 text-sm">
+                <p>Deadline</p>
+                <p class="text-gray-900 font-semibold">21 March 2025</p>
+              </div>
+              <button class="btn bg-blue-600 text-white border-none hover:bg-blue-700">Completed</button>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="bg-slate-200 p-4 rounded-2xl">
+            <div class="bg-white text-gray-600 text-xs font-semibold px-2 py-1 rounded-md inline-block">
+              Google LLC
+            </div>
+            <h2 class="text-lg font-semibold text-gray-900 mt-2">
+              Integrate OpenAI API
+            </h2>
+            <p class="text-gray-500 text-sm mt-1 bg-white p-2 rounded-md">
+              Debug using Chrome DevTools, check for overlapping elements,...
+            </p>
+            <div class="mt-4 flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-3">
+              <div class="text-gray-500 text-sm">
+                <p>Deadline</p>
+                <p class="text-gray-900 font-semibold">21 March 2025</p>
+              </div>
+              <button class="btn bg-blue-600 text-white border-none hover:bg-blue-700">Completed</button>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="bg-slate-200 p-4 rounded-2xl">
+            <div class="bg-white text-gray-600 text-xs font-semibold px-2 py-1 rounded-md inline-block">
+              Glassdoar
+            </div>
+            <h2 class="text-lg font-semibold text-gray-900 mt-2">
+              Improve Job searching
+            </h2>
+            <p class="text-gray-500 text-sm mt-1 bg-white p-2 rounded-md">
+              Store the user's preference in localStorage, update CSS variab...
+            </p>
+            <div class="mt-4 flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-3">
+              <div class="text-gray-500 text-sm">
+                <p>Deadline</p>
+                <p class="text-gray-900 font-semibold">21 March 2025</p>
+              </div>
+              <button class="btn bg-blue-600 text-white border-none hover:bg-blue-700">Completed</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Activity -->
+      <div class="bg-white rounded-2xl py-5 col-span-1">
+        <div class="flex items-center justify-center gap-4 mb-4">
+          <img src="assets/activity.png" alt="">
+          <h4 class="font-medium text-gray-500">Activity Log</h4>
+        </div>
+        <div class="flex justify-center border-b-2 border-dashed border-gray-300 pb-4">
+          <button class="btn bg-blue-600 text-white border-none hover:bg-blue-700">Clear History</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="scripts/theme-btn.js"></script>
+  <script src="scripts/current-date.js"></script>
 </body>
 
 </html>
