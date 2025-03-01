@@ -33,8 +33,43 @@
             </div>
           </div>
     </nav>
-    <main>
-        <h1 class="text-2xl font-bold text-center">Blogs</h1>
+    <main class="px-4 md:px-32 pb-6">
+        <h1 class="text-2xl font-bold text-center mb-6">Blogs</h1>
+        <!-- Question 1 -->
+        <div class="bg-white rounded-2xl mb-4">
+          <div class="border-b-2 border-dashed border-gray-300 p-4">
+            <h1 class="font-bold text-lg">Question-1: What are the different ways to select an element in the DOM?</h1>
+          </div>
+          <p class="p-4 text-gray-600">Within the various methods to select a DOM element, which consists of the following are: using an ID <strong>(getElementById)</strong>, by class name <strong>(getElementsByClassName)</strong>, by tag name <strong>(getElementsByTagName)</strong>, and by name attribute <strong>(getElementsByName)</strong>, CSS selectors <strong>(querySelector)</strong> for 1 and <strong>(querySelectorAll)</strong> for many. Also, elements can be selected through XPath with <strong>(document.evaluate)</strong> that makes you able to choose the items by executing the particular XPath expressions. But, the ones popular and the go-to choice are <strong>(querySelector)</strong> and <strong>(querySelectorAll)</strong> in modern web application development because of the adaptability of those selections.</p>
+        </div>
+        <!-- Question 2 -->
+        <div class="bg-white rounded-2xl mb-4">
+          <div class="border-b-2 border-dashed border-gray-300 p-4">
+            <h1 class="font-bold text-lg">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
+          </div>
+          <p class="p-4 text-gray-600"><strong>(innerHTML)</strong> can both handle the text and HTML very well as it renders any of the tags in the inside. <strong>(innerText)</strong> is the one that can only get the visible texts hiding the elements & apart from that, it also strips the HTML tags. <strong>(textContent)</strong> retrieves all the text, including hidden elements, without any HTML processing. So to say <strong>(innerHTML)</strong> is for HTML insertion, <strong>(innerText)</strong> is for only visible text, and <strong>(textContent)</strong> is for raw text, containing hidden content. </p>
+        </div>
+        <!-- Question 3 -->
+        <div class="bg-white rounded-2xl mb-4">
+          <div class="border-b-2 border-dashed border-gray-300 p-4">
+            <h1 class="font-bold text-lg">Question-3: What is event delegation in the DOM?</h1>
+          </div>
+          <p class="p-4 text-gray-600">Event delegation is an approach wherein an element manages events for a child element with the help of event bubbling that occurs. A single parent listener with this capability is enough to recognize the event and identify the target or child element instead of putting listeners to each child. The performance of the system is boosted and it functions even for the elements which are introduced in the dynamic way.</p>
+        </div>
+        <!-- Question 4 -->
+        <div class="bg-white rounded-2xl mb-4">
+          <div class="border-b-2 border-dashed border-gray-300 p-4">
+            <h1 class="font-bold text-lg">Question-4: What is event bubbling in the DOM?</h1>
+          </div>
+          <p class="p-4 text-gray-600">Event bubbling is when the event gets started at the target element and comes through its parent elements. This gives the parent elements a chance to manage events that are caused by their kids. Bubbling cannot be stopped by means of parent's <strong>"event.stopPropagation()"</strong>, which is fully up to the child.</p>
+        </div>
+        <!-- Question 5 -->
+        <div class="bg-white rounded-2xl mb-4">
+          <div class="border-b-2 border-dashed border-gray-300 p-4">
+            <h1 class="font-bold text-lg">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+          </div>
+          <p class="p-4 text-gray-600">You can create HTML components in JavaScript by using the <strong>"document.createElement()"</strong> method, you can insert them using the functions <strong>"appendChild()"</strong>, <strong>"append()"</strong>, or <strong>"insertBefore()"</strong>, while you can delete them using the <strong>"removeChild()"</strong> function or by calling the <strong>"remove()"</strong> method on the specific element. They make it possible to do dynamic changes to the DOM.</p>
+        </div>
     </main>
 
     <script>
