@@ -1,3 +1,5 @@
+let clickedButtonsCount = 0;
+
 document.querySelectorAll(".taskButton").forEach(button => {
     button.addEventListener("click", function() {
         let taskTitle = this.parentElement.parentElement.querySelector("h2").innerText;
@@ -16,6 +18,11 @@ document.querySelectorAll(".taskButton").forEach(button => {
         this.style.backgroundColor = "gray-100";
 
         alert(`Board Updated Successfully`);
+
+        clickedButtonsCount++;
+        if (clickedButtonsCount === document.querySelectorAll(".taskButton").length) {
+            alert("Congratulations! You've completed all the tasks!");
+        }
     })
 })
 
