@@ -8,9 +8,12 @@ document.querySelectorAll(".taskButton").forEach(button => {
 
         let logEntry = document.createElement("div");
         logEntry.classList.add("bg-slate-200", "p-3", "rounded-lg", "m-2");
-        logEntry.innerHTML = `<p class = "text-xs text-center">You have Complete The Task <strong>${taskTitle}</strong> at ${timeString}</p>`;
+        logEntry.innerHTML = `<p class = "text-xs text-center">You have Complete The Task <strong>${taskTitle}</strong> at <strong>${timeString}</strong></p>`;
 
         logContainer.appendChild(logEntry);
+
+        this.disabled = true;
+        this.style.backgroundColor = "gray-100";
 
         alert(`Board Updated Successfully`);
     })

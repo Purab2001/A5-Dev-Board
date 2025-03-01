@@ -32,7 +32,7 @@
       <div class="flex items-center gap-9 mt-4 md:mt-0">
         <div class="flex items-center gap-2 py-2 px-4 bg-slate-200 rounded-3xl">
           <img class="w-5" src="assets/checkbox.png" alt="Tasks">
-          <h2 class="font-bold text-xl">24</h2>
+          <h2 id="task-counter" class="font-bold text-xl">24</h2>
         </div>
         <div class="p-2 bg-slate-200 rounded-full">
           <img id="theme-Btn" class="w-8 cursor-pointer" src="assets/theme-btn.png" alt="Theme button">
@@ -52,7 +52,7 @@
             </div>
             <div>
               <h5 class="font-medium text-xs text-gray-600">Task Assigned</h5>
-              <h3 class="font-bold text-2xl">0<span>6</span></h3>
+              <h3 class="font-bold text-2xl">0<span id="task-count">6</span></h3>
             </div>
           </div>
           <div class="flex items-center rounded-xl p-7 bg-gradient-to-r from-blue-500 to-blue-300 gap-4 mb-4 md:mb-0">
@@ -208,6 +208,7 @@
   <script src="scripts/theme-btn.js"></script>
   <script src="scripts/current-date.js"></script>
   <script src="scripts/activity-log.js"></script>
+  <script src="scripts/task-counter.js"></script>
 </body>
 
 </html>
